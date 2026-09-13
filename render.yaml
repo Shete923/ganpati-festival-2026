@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ganpati-festival-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DEFAULT_COORD_PASSWORD
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false

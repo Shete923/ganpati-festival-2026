@@ -1,0 +1,24 @@
+export default function Leaderboard({ rows }) {
+  if (!rows || rows.length === 0) {
+    return <div className="empty-state">No results yet.</div>;
+  }
+  return (
+    <div className="table-scroll">
+      <table className="leaderboard-table">
+        <thead>
+          <tr><th>Rank</th><th>Team</th><th>Members</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          {rows.map(r => (
+            <tr key={r.participantId} className={r.rank === 1 ? 'rank-1' : ''}>
+              <td>{r.rank}</td>
+              <td>{r.name}</td>
+              <td>{r.members?.length ? r.members.join(' · ') : '—'}</td>
+              <td>{r.total}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
