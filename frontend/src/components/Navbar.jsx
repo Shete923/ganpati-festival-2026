@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="brand">
-        <img src="/company-logo.jpeg" alt="Sumago Infotech logo" />
+        <img src={`${import.meta.env.BASE_URL}company-logo.jpeg`} alt="Sumago Infotech logo" />
         <span className="brand-copy"><strong>Ganpati Festival</strong><small>2026</small></span>
       </Link>
       <div className="nav-links">

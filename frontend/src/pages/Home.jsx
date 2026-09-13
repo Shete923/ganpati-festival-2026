@@ -14,8 +14,8 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image" role="img" aria-label="Ganpati idol surrounded by marigold garlands">
-          <video autoPlay loop muted playsInline poster="/ganapati-hero.jfif" aria-hidden="true">
-            <source src="/hero-ganapati.mp4" type="video/mp4" />
+          <video autoPlay loop muted playsInline poster={`${import.meta.env.BASE_URL}ganapati-hero.jfif`} aria-hidden="true">
+            <source src={`${import.meta.env.BASE_URL}hero-ganapati.mp4`} type="video/mp4" />
           </video>
         </div>
       </section>
