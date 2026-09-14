@@ -10,9 +10,9 @@ export default function AartiSchedule() {
 
   return (
     <div className="page">
-      <p className="eyebrow">Daily Devotion</p>
+      <p className="eyebrow">Shree Ganeshaya Namah</p>
       <h1>Aarti Schedule</h1>
-      <p className="schedule-intro">Join us for morning and evening aarti throughout the Ganpati festival.</p>
+      <p className="schedule-intro">Let&apos;s come together for the morning and evening aarti and seek Bappa&apos;s blessings throughout the festival.</p>
       <div className="aarti-grid">
         {schedule.map(item => (
           <article className="aarti-card" key={item._id || item.date}>
