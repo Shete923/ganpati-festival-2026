@@ -50,7 +50,18 @@ const EMPLOYEE_NAMES = [
   'Kedar Dixit',
   'Yash Bidgar',
   'Tanuja Jadhav',
-  'Saurabhi Kulkarni'
+  'Saurabhi Kulkarni',
+  'Chandrakant',
+  'Balaji',
+  'Chetan',
+  'Anurag',
+  'Kailash',
+  'Mahesh',
+  'Mukesh',
+  'Pranav',
+  'Rahul',
+  'Satish',
+  'Furkhan'
 ];
 
 const TEAM_NAMES = [
@@ -63,7 +74,8 @@ const TEAM_NAMES = [
   'विघ्नराज (Vighnaraja)',
   'धूम्रवर्ण (Dhumravarna)',
   'भालचंद्र (Bhalachandra)',
-  'गजानन (Gajanan)'
+  'गजानन (Gajanan)',
+  'Mahindra Team'
 ];
 
 function cleanMembers(members) {
