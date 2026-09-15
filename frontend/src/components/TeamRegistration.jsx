@@ -2,8 +2,8 @@ import { useState } from 'react';
 import api from '../api.js';
 
 const EMPLOYEE_NAMES = [
-  'Sudhir Gorade',
-  'Sonali Gorade',
+  'Sudhir Gorade Sir',
+  'Sonali Garade Mam',
   'Omkar Shirsagar',
   'Sanket Batwal',
   'Piyush Gamne',
