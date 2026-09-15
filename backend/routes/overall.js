@@ -38,11 +38,18 @@ async function computeOverall() {
   return rows;
 }
 
+async function isChampionshipReady() {
+  const events = await Event.find({ isRegistration: { $ne: true } }).select('finalized');
+  return events.length > 0 && events.every(event => event.finalized);
+}
+
 router.get('/', async (req, res) => {
+  if (!(await isChampionshipReady())) return res.json([]);
   res.json(await computeOverall());
 });
 
 router.get('/export.csv', async (req, res) => {
+  if (!(await isChampionshipReady())) return res.status(403).json({ error: 'Overall leaderboard is locked until all events are finalized' });
   const rows = await computeOverall();
   const parser = new Parser({ fields: ['rank', 'name', 'total'] });
   const csv = parser.parse(rows);

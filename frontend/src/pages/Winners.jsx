@@ -15,16 +15,24 @@ export default function Winners() {
 
   const completed = events.filter(e => e.status === 'completed');
   const overallRows = overall.map(r => ({ ...r, participantId: r.name }));
+  const scoringEvents = events.filter(e => !e.isRegistration);
+  const championshipReady = scoringEvents.length > 0 && scoringEvents.every(e => e.finalized);
 
   return (
     <div className="page">
       <h1>Winners & Final Results</h1>
 
       <section className="card">
-        <h2>Overall Festival Leaderboard</h2>
-        <Leaderboard rows={overallRows} />
-        {overallRows.length > 0 && (
-          <a className="btn btn-secondary btn-small" href="/api/overall-leaderboard/export.csv">Export Overall CSV</a>
+        <h2>Championship</h2>
+        {championshipReady ? (
+          <>
+            <Leaderboard rows={overallRows} />
+            {overallRows.length > 0 && (
+              <a className="btn btn-secondary btn-small" href="/api/overall-leaderboard/export.csv">Export Overall CSV</a>
+            )}
+          </>
+        ) : (
+          <p className="section-note">The championship leaderboard will be revealed after the final event. View each event for current points and changes.</p>
         )}
       </section>
 
