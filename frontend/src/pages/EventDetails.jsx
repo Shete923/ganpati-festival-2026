@@ -49,7 +49,7 @@ export default function EventDetails() {
 
       <section className="card">
         <h2>Leaderboard</h2>
-        <Leaderboard rows={leaderboard} />
+        <Leaderboard rows={leaderboard} compact />
         {leaderboard.length > 0 && (
           <a className="btn btn-secondary btn-small" href={`/api/events/${slug}/export/results.csv`}>Export Results CSV</a>
         )}
