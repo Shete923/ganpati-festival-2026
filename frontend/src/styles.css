@@ -51,6 +51,8 @@ a { color: var(--saffron-dark); text-decoration: none; }
 .nav-links { display: flex; gap: 16px; }
 .nav-links a { color: #fff; font-size: 1.1rem; font-weight: 500; }
 .nav-coord-link { border: 1px solid rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 6px; }
+.nav-teams-link { color: #3d2b08 !important; background: #e6ca59; padding: 6px 12px; border-radius: 6px; font-weight: 700 !important; }
+.nav-teams-link:hover { background: #f2d978; }
 .site-credit { position: absolute; right: 18px; bottom: 2px; color: #e6ca59; font-size: .58rem; letter-spacing: .04em; white-space: nowrap; }
 
 /* Hero */
@@ -362,6 +364,7 @@ body:not(:has(.home-page)) .brand-copy small { color: #e6ca59; font-size: .72em;
 body:not(:has(.home-page)) .nav-links { gap: clamp(12px, 2.1vw, 25px); align-items: center; }
 body:not(:has(.home-page)) .nav-links a { color: #bbc7b4; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; }
 body:not(:has(.home-page)) .nav-coord-link { border: 0; padding: 0; }
+body:not(:has(.home-page)) .nav-teams-link { color: #173f35 !important; padding: 8px 12px; }
 body:not(:has(.home-page)) .site-credit { color: #e6ca59; font-size: .52rem; letter-spacing: .08em; text-transform: uppercase; }
 
 body:not(:has(.home-page)) .page {
@@ -489,6 +492,10 @@ body:not(:has(.home-page)) .btn-link { color: #8f7620; }
 body:not(:has(.home-page)) table { background: #fffdf7; }
 body:not(:has(.home-page)) th { background: #073c32; color: #e6ca59; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
 body:not(:has(.home-page)) td { color: #536c62; border-bottom-color: #e9e0ca; font-size: .72rem; }
+body:not(:has(.home-page)) .event-leaderboard-table { min-width: 620px; }
+body:not(:has(.home-page)) .event-leaderboard-table th,
+body:not(:has(.home-page)) .event-leaderboard-table td { padding: 16px 24px; }
+body:not(:has(.home-page)) .event-leaderboard-table td { font-size: .9rem; }
 body:not(:has(.home-page)) tr.rank-1 { background: #f7edc9; }
 body:not(:has(.home-page)) .points-table .sticky-col { background: #fffdf7; }
 body:not(:has(.home-page)) .points-table th.sticky-col { background: #073c32; }
